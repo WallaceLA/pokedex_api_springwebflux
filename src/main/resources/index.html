@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pokemons em Eventos</title>
+
+    <script type="text/javascript">
+        if (!!window.EventSource){
+            let eventSource = new EventSource('pokemon/events'); //http://localhost:8080/index.html
+            let eventList = document.querySelector('ul');
+
+            eventSource.onmessage = function (e){
+                let newElement = document.createElement('li');
+
+                newElement.textContent = "Event: " + e.data;
+                eventList.appendChild(newElement);
+            }
+        } else {
+            alert("Sem suporte para SSE neste navegador!")
+        }
+    </script>
+</head>
+<body>
+    <ul></ul>
+</body>
+</html>
