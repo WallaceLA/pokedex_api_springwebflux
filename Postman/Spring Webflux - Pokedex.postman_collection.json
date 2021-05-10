@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "2bb53469-3ee2-4a94-8cf0-45a95d18e7f9",
+		"name": "Spring Webflux - Pokedex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Pokemon By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pokemon/609855228fd5de58acf543c8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pokemon",
+						"609855228fd5de58acf543c8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Pokemons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pokemon",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pokemon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Pokemon",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Treecko\",\r\n\t\"type\": [\r\n\t\t\"Grass\"\r\n\t],\r\n\t\"abilities\": [\r\n\t\t\"Overgrown\",\r\n\t\t\"Unburden\"\r\n\t],\r\n\t\"weight\": 5,\r\n\t\"height\": 0.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pokemon",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pokemon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Pokemon",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Mudkip\",\r\n\t\"type\": [\r\n\t\t\"Water\"\r\n\t],\r\n\t\"abilities\": [\r\n\t\t\"Torrent\",\r\n\t\t\"Damp\"\r\n\t],\r\n\t\"weight\": 7.6,\r\n\t\"height\": 0.4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/pokemon/6098556f8fd5de58acf543c9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pokemon",
+						"6098556f8fd5de58acf543c9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pokemon/6098556f8fd5de58acf543c9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pokemon",
+						"6098556f8fd5de58acf543c9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete All",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/pokemon",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"pokemon"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
